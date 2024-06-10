@@ -3,9 +3,9 @@ import "../styles/Header.css";
 function Header() {
   return (
     <>
-      <nav className="container">
+      <div className="header-container">
         <p className="ubuntu-medium">dash</p>
-      </nav>
+      </div>
     </>
   );
 }
