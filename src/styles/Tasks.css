@@ -1,0 +1,44 @@
+
+.input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-box {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .list-container {
+    margin-top: 20px;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .delete-button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
