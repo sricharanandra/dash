@@ -1,7 +1,7 @@
 function Tasks() {
   return (
     <>
-      <h1>Tasks page</h1>
+      <h1>Tasks</h1>
     </>
   );
 }
