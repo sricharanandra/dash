@@ -1,14 +1,14 @@
 
-.container {
+.header-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     width: 100%;
+    border: 3px solid;
     border-radius: 5px;
     color: rgb(0, 0, 0);
 
-    border: 3px solid;
     .ubuntu-medium {
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
