@@ -1,14 +1,14 @@
-import Tasks from "./sidebar-components/Tasks";
+import Tasks from "./ControlBar-components/Tasks";
 import { Link } from "react-router-dom";
 
-function Sidebar() {
+function ControlBar() {
   return (
     <>
-      <div className="sidebar">
+      <div className="ControlBar">
         <Link to="#" className="menu-bars"></Link>
       </div>
     </>
   );
 }
 
-export default Sidebar;
+export default ControlBar;
