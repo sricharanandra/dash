@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import { MdOutlineAddCircleOutline } from "react-icons/md";
+import { HiOutlineTrash } from "react-icons/hi";
+import { IconContext } from "react-icons";
+
 import "/Web Dev/dash/src/styles/Tasks.css";
 
 const Tasks = () => {
@@ -28,7 +32,7 @@ const Tasks = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="input-container">
         <input
           onChange={(e) => handleChange(e)}
@@ -39,9 +43,16 @@ const Tasks = () => {
           id="inputtext"
           placeholder="Enter the Task"
         />
-        <button className="submit-button" onClick={() => addTask()}>
-          Add Task
-        </button>
+        <IconContext.Provider
+          value={{
+            style: { height: "25px", width: "25px" },
+            className: "global-class-name",
+          }}
+        >
+          <button className="submit-button" onClick={() => addTask()}>
+            <MdOutlineAddCircleOutline />
+          </button>
+        </IconContext.Provider>
       </div>
       <div className="list-container">
         <ul className="list">
@@ -52,13 +63,13 @@ const Tasks = () => {
                 className="delete-button"
                 onClick={() => deleteTask(index)}
               >
-                Delete
+                <HiOutlineTrash />
               </button>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

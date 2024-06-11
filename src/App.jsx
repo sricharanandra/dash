@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="stuff">
+      <div className="main-components">
         <Header />
         <Display />
         <ControlBar />

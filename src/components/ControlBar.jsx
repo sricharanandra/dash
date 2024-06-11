@@ -1,8 +1,6 @@
-import Tasks from "./ControlBar-components/Tasks";
 import { Link } from "react-router-dom";
+import { ImHome } from "react-icons/im";
 import * as FaIcons from "react-icons/fa";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Home";
 
 import "../styles/ControlBar.css";
 
@@ -13,7 +11,9 @@ function ControlBar() {
         <Link to="/tasks" className="menu-bars">
           <FaIcons.FaTasks />
         </Link>
-        <Link to="/">Home</Link>
+        <Link to="/">
+          <ImHome />
+        </Link>
       </nav>
     </>
   );
