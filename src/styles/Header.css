@@ -7,13 +7,14 @@
     width: 100%;
     border: 3px solid;
     border-radius: 5px;
-    color: rgb(0, 0, 0);
+    border-color: #e5e7eb;
 
     .ubuntu-medium {
         font-family: "Ubuntu", sans-serif;
         font-weight: 500;
         font-style: normal;
         font-size: 50px;
+        color: white
       }
     
 }

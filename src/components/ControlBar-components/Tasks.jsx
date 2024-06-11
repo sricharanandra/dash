@@ -45,7 +45,7 @@ const Tasks = () => {
         />
         <IconContext.Provider
           value={{
-            style: { height: "25px", width: "25px" },
+            style: { height: "25px", color: "#e5e7eb", width: "25px" },
             className: "global-class-name",
           }}
         >
@@ -59,12 +59,19 @@ const Tasks = () => {
           {tasks.map((task, index) => (
             <li className="list-item " key={index}>
               {task}{" "}
-              <button
-                className="delete-button"
-                onClick={() => deleteTask(index)}
+              <IconContext.Provider
+                value={{
+                  style: { height: "25px", color: "#e5e7eb", width: "25px" },
+                  className: "global-class-name",
+                }}
               >
-                <HiOutlineTrash />
-              </button>
+                <button
+                  className="delete-button"
+                  onClick={() => deleteTask(index)}
+                >
+                  <HiOutlineTrash />
+                </button>
+              </IconContext.Provider>
             </li>
           ))}
         </ul>
