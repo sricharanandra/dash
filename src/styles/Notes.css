@@ -1,0 +1,41 @@
+
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.notes-area {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-height: calc(100vh - 200px);
+  overflow-y: scroll;
+}
+
+.note {
+  flex-basis: calc(25% - 20px); 
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 200px;
+  background-color: lightblue; 
+  margin: 10px;
+}
+
+.note-new {
+  flex-basis: calc(25% - 20px); 
+  width: 200px;
+  height: 200px;
+  background-color: lightblue; 
+  margin: 10px;
+}
+
+.the-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
