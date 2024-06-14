@@ -1,21 +1,17 @@
 # dash: Your Ultimate Developer Dashboard 🚀
 
----
 
 *dash* is a sophisticated dashboard designed to revolutionize the daily workflow of developers. Tired of endless browser tabs and juggling multiple apps, hogging all of your computing power? dash consolidates all your essential tools into one seamless, intuitive platform. Whether you're managing tasks, jotting down quick notes, or looking for a future-ready chat interface and music player, *dash* is your all-in-one solution for unparalleled productivity and organization.
 
 ## 🌟 Key Features
 
-### 🔖 Task Manager
+### 🔖 Tasks
 Effortlessly add, track, and delete your pending tasks. Stay organized and on top of your to-do list with a tool that's as dynamic as your day.
-
-### 📝 Sticky Notes
-Create and manage sticky notes for quick reminders. Whether it's a snippet of code or an important reminder, keep your thoughts within reach.
 
 ### 🔮 Future Integrations
 - **ChatGPT Integration**: Use OpenAI's powerful API to bring an intelligent chat tool directly into your dashboard.
 - **Spotify Music Player**: Load and play your favorite tracks without leaving your productivity hub.
-
+- **Sticky Notes**: Create and manage sticky notes for quick reminders. Whether it's a snippet of code or an important reminder, keep your thoughts within reach.
 ## 🎨 Why Dash?
 
 - **Unified Experience**: Centralize your tools and reduce the chaos of multiple apps.
