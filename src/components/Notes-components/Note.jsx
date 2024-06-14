@@ -8,12 +8,12 @@ const Note = ({ id, text, date, handleDeleteNote }) => {
       <div className="note-footer">
         <div className="date">{date}</div>
 
-        <div className="delete-button">
+        <div className="note-delete-button">
           <IconContext.Provider
             value={{
               style: {
-                height: "15px",
-                width: "15px",
+                height: "25px",
+                width: "25px",
                 backgroundColor: "#e5e7eb ",
               },
               className: "global-class-name",
