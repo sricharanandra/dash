@@ -4,22 +4,28 @@ import NotesList from "../Notes-components/NotesList";
 import Search from "../Notes-components/Search";
 import AddNote from "../Notes-components/AddNote";
 import "/Web Dev/dash/src/styles/Notes.css";
+
 const Notes = () => {
   const [notes, setNotes] = useState([]);
-
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     const savedNotes =
       JSON.parse(localStorage.getItem("react-notes-app-data")) || [];
 
-    if (savedNotes) {
+    if (savedNotes.length > 0) {
       setNotes(savedNotes);
     }
-  }, []);
+  }, ["react-notes-app-data"]);
 
   useEffect(() => {
-    localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+    const saveNotes = () => {
+      localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+    };
+
+    saveNotes();
+
+    return saveNotes;
   }, [notes]);
 
   const addNote = (text) => {
@@ -52,7 +58,6 @@ const Notes = () => {
           </div>
         ) : (
           <div className="Noter">
-            {" "}
             <NotesList
               notes={notes.filter((note) =>
                 note.text.toLowerCase().includes(searchText.toLowerCase())
