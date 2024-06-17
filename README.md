@@ -10,9 +10,16 @@ Effortlessly add, track, and delete your pending tasks. Stay organized and on to
 ### 📓 Sticky Notes
 Create and manage sticky notes for quick reminders. Whether it's a snippet of code or an important reminder, keep your thoughts within reach.
 
+### Curently Cooking 🍳
+- **Testing Spotify API Authentication** for users to log into their spotify accounts.
+- Adding an edit feature to edit a sticky note.
+- Looking for GenAI API's
+  
+
 ### 🔮 Future Feature Integrations
 - **AI Integration**: Using freemium API's to bring an intelligent chat tool directly into your dashboard to ask your programming doubts (like how to center this div).
 - **Spotify Music Player**: Load and play your favorite tracks without leaving your productivity hub.
+- **URL-Redirecter**: Productivity feature to redirect user-defined blacklisted URL's.
 ## 🎨 Why Dash?
 
 - **Unified Experience**: Centralize your tools and reduce the chaos of multiple apps.
