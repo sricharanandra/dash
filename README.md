@@ -7,11 +7,12 @@
 
 ### 🔖 Tasks
 Effortlessly add, track, and delete your pending tasks. Stay organized and on top of your to-do list with a tool that's as dynamic as your day.
+### 📓 Sticky Notes
+Create and manage sticky notes for quick reminders. Whether it's a snippet of code or an important reminder, keep your thoughts within reach.
 
-### 🔮 Future Integrations
-- **ChatGPT Integration**: Use OpenAI's powerful API to bring an intelligent chat tool directly into your dashboard.
+### 🔮 Future Feature Integrations
+- **AI Integration**: Using freemium API's to bring an intelligent chat tool directly into your dashboard to ask your programming doubts (like how to center this div).
 - **Spotify Music Player**: Load and play your favorite tracks without leaving your productivity hub.
-- **Sticky Notes**: Create and manage sticky notes for quick reminders. Whether it's a snippet of code or an important reminder, keep your thoughts within reach.
 ## 🎨 Why Dash?
 
 - **Unified Experience**: Centralize your tools and reduce the chaos of multiple apps.
@@ -45,7 +46,8 @@ Ready to boost your productivity? Follow these simple steps to get started with 
 We welcome contributions from developers of all levels. To contribute to Dash:
 
 1. **Fork the Repository** on GitHub.
-2. **To add a feature**:
+2. **Follow the same steps given above**
+3. **To add a feature**:
     ```bash
     git checkout -b feat/your-feature 
     ```
@@ -80,4 +82,4 @@ Elevate your development workflow with dash and experience a new level of effici
 
 ---
 
-*Made with ❤️ by Dash Team*
+*Made with ❤️*
