@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { MdOutlineAddCircleOutline } from "react-icons/md";
+import { IconContext } from "react-icons";
 
 const AddNote = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState("");
@@ -29,9 +31,21 @@ const AddNote = ({ handleAddNote }) => {
       ></textarea>
       <div className="add-note-footer">
         {characterLimit - noteText.length} Remaining
-        <button className="save" onClick={handleSaveClick}>
-          Save
-        </button>
+        <IconContext.Provider
+          value={{
+            style: {
+              height: "25px",
+              color: "white",
+              backgroundColor: "#292b2f",
+              width: "25px",
+            },
+            className: "global-class-name",
+          }}
+        >
+          <button className="save" onClick={handleSaveClick}>
+            <MdOutlineAddCircleOutline />
+          </button>
+        </IconContext.Provider>
       </div>
     </div>
   );

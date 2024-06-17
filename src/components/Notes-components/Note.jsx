@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { IconContext } from "react-icons";
 
@@ -7,14 +8,14 @@ const Note = ({ id, text, date, handleDeleteNote }) => {
       <div className="note-text">{text}</div>
       <div className="note-footer">
         <div className="date">{date}</div>
-
         <div className="note-delete-button">
           <IconContext.Provider
             value={{
               style: {
                 height: "25px",
                 width: "25px",
-                backgroundColor: "#e5e7eb ",
+                backgroundColor: "#292b2f ",
+                color: "e5e7eb",
               },
               className: "global-class-name",
             }}

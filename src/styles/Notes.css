@@ -1,10 +1,26 @@
 
 .search {
+  height: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+
+}
+
+.search-input {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  width: 200px;
+  padding: 3px;
+  color: #e5e7eb;
+  text-align: center;
+}
+.search-icons {
+  margin-left: 10px;
+  color: #e5e7eb;
 }
 
 .notes-area {
@@ -14,6 +30,7 @@
   justify-content: space-evenly;
   max-height: calc(100vh - 200px);
   overflow-y: scroll;
+
 }
 
 .note {
@@ -23,7 +40,7 @@
   align-items: center;
   width: 300px;
   height: 300px;
-  background-color: #e5e7eb; 
+  background-color: #292b2f; 
   margin: 10px;
   border: 1px solid;
   border-color: #e5e7eb; ;
@@ -31,12 +48,16 @@
 }
 
 .note-text{
+  color:#e5e7eb ;
+  margin: 20px;
   padding: 10px;
-  width: 100%;
-  height: auto;
-  background-color: #e5e7eb; 
+  height: 280px;
+  width: 280px;
+  background-color: #40444b; 
   border: 1px solid;
   border-radius: 5px;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .note-new {
@@ -46,14 +67,21 @@
   align-items: center;
   width: 300px;
   height: 300px;
-  background-color: #e5e7eb; 
+  background-color: #292b2f; 
   margin: 10px;
+  border: 1px solid;
+  border-color: #e5e7eb; ;
+  border-radius: 5px;
 }
 .add-note-textarea {
   padding: 10px;
   height: 150px;
   width:250px;
+  border-radius: 3px;
   margin-top: 20px;
+  background-color: #40444b; 
+  color:#e5e7eb;
+
 } 
 .add-note-footer {
   display: flex;
@@ -61,16 +89,18 @@
   justify-content: space-between;
   font-size: small;
   margin-bottom: 30px;
+  color: #e5e7eb;
 }
 
 .save{
   margin-left: 100px;
-  padding: 3px;
-  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  background-color: #292b2f;
 }
 
-.note-textarea, .note-footer, .date, .note-delete-button, .del-button, .add-note-footer, .save, .add-note-textarea{
-  background-color: #e5e7eb;
+.note-textarea, .note-new, .note-footer, .date, .note-delete-button, .del-button, .add-note-footer{
+  background-color: #292b2f;
 }
 
 .del-button {
@@ -81,6 +111,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: small;
+  color: #e5e7eb
 }
 .note-delete-button {
   margin-left: 200px;
