@@ -1,5 +1,7 @@
   .input-container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     margin: 3px;
   }
@@ -11,12 +13,22 @@
     color: #e5e7eb;
     width: 202.918px;
   }
+
+  .category-selector{
+    margin-left: 10px;
+    background-color: #202225;
+    color: #e5e7eb;
+    text-align: center;
+    border: none;
+    border-color: #e5e7eb;
+  }
+
   
   .submit-button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: oklch(25.3267% 0.015896 252.417568 /1);
+    background-color: #202225;
     margin-left: 30px;
 
   }
@@ -24,7 +36,11 @@
   .list-container {
     margin-top: 20px;
   }
-  
+  .task-list{
+    overflow-y: scroll;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
   .list {
     list-style-type: none;
     padding: 0;
@@ -40,7 +56,7 @@
     margin-bottom: 10px;
     border:white solid 2px ;
     border-radius: 4px;
-    color: #e5e7eb
+    color: #e5e7eb;
   }
   
   .task-delete-button {
@@ -48,4 +64,18 @@
     border-radius: 4px;
     cursor: pointer;
     background-color: #292b2f;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #category-button {
+    padding: 3px;
+    margin: 10px;
+    background-color: #292b2f;
+    color: #e5e7eb;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 5px;
   }
