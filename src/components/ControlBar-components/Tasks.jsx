@@ -61,7 +61,12 @@ const Tasks = () => {
               {task}{" "}
               <IconContext.Provider
                 value={{
-                  style: { height: "25px", color: "#e5e7eb", width: "25px" },
+                  style: {
+                    height: "25px",
+                    backgroundColor: "#292b2f",
+                    color: "#e5e7eb",
+                    width: "25px",
+                  },
                   className: "global-class-name",
                 }}
               >

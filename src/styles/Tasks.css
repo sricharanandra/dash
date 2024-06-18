@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: oklch(25.3267% 0.015896 252.417568 /1);
+    background-color: #292b2f;
     margin-bottom: 10px;
     border:white solid 2px ;
     border-radius: 4px;
@@ -47,5 +47,5 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: oklch(25.3267% 0.015896 252.417568 /1);
+    background-color: #292b2f;
   }
