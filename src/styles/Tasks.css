@@ -43,7 +43,7 @@
     color: #e5e7eb
   }
   
-  .delete-button {
+  .task-delete-button {
     border: none;
     border-radius: 4px;
     cursor: pointer;

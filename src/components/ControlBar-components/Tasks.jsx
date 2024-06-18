@@ -66,7 +66,7 @@ const Tasks = () => {
                 }}
               >
                 <button
-                  className="delete-button"
+                  className="task-delete-button"
                   onClick={() => deleteTask(index)}
                 >
                   <HiOutlineTrash />

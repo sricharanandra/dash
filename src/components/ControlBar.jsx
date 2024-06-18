@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ImHome } from "react-icons/im";
 import * as FaIcons from "react-icons/fa";
+import { FaRegNoteSticky } from "react-icons/fa6";
+
 import { IconContext } from "react-icons";
 
 import "../styles/ControlBar.css";
@@ -28,6 +30,17 @@ function ControlBar() {
         >
           <Link to="/">
             <ImHome />
+          </Link>
+        </IconContext.Provider>
+
+        <IconContext.Provider
+          value={{
+            style: { height: "25px", color: "white", width: "25px" },
+            className: "global-class-name",
+          }}
+        >
+          <Link to="/notes">
+            <FaRegNoteSticky />
           </Link>
         </IconContext.Provider>
       </nav>
