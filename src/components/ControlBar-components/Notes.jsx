@@ -10,17 +10,16 @@ const Notes = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    const savedNotes =
-      JSON.parse(localStorage.getItem("react-notes-app-data")) || [];
+    const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
 
     if (savedNotes.length > 0) {
       setNotes(savedNotes);
     }
-  }, ["react-notes-app-data"]);
+  }, ["notes"]);
 
   useEffect(() => {
     const saveNotes = () => {
-      localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
+      localStorage.setItem("notes", JSON.stringify(notes));
     };
 
     saveNotes();
@@ -37,13 +36,13 @@ const Notes = () => {
     };
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
-    localStorage.setItem("react-notes-app-data", JSON.stringify(newNotes));
+    localStorage.setItem("notes", JSON.stringify(newNotes));
   };
 
   const deleteNote = (id) => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
-    localStorage.setItem("react-notes-app-data", JSON.stringify(newNotes));
+    localStorage.setItem("notes", JSON.stringify(newNotes));
   };
 
   return (
