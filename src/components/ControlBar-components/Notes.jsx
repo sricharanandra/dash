@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import NotesList from "../Notes-components/NotesList";
 import Search from "../Notes-components/Search";
 import AddNote from "../Notes-components/AddNote";
-import "/Web Dev/dash/src/styles/Notes.css";
+import "../../styles/Notes.css";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);

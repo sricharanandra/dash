@@ -1,4 +1,4 @@
-import "/Web Dev/dash/src/styles/Home.css";
+import "../../styles/Home.css";
 
 function Home() {
   return (

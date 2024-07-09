@@ -3,7 +3,7 @@ import { MdOutlineAddCircleOutline } from "react-icons/md";
 import { HiOutlineTrash } from "react-icons/hi";
 import { IconContext } from "react-icons";
 
-import "/Web Dev/dash/src/styles/Tasks.css";
+import "../../styles/Tasks.css";
 
 const categories = ["Important", "General", "Finish by Today"];
 
