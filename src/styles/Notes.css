@@ -105,16 +105,20 @@
 
 .del-button {
   border: none;
+  width: 20px;
+  margin-right: 20px;
 }
 .note-footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: small;
-  color: #e5e7eb
+  color: #e5e7eb;
+  width: 290px
 }
 .note-delete-button {
-  margin-left: 200px;
+width: 20px;
+
 }
 .the-notes {
   display: flex;
