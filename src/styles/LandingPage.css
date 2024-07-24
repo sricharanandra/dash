@@ -115,6 +115,7 @@ button {
    font-weight: bold;
    background-color: aliceblue;
    margin-bottom: 0px;
+   text-align: center;
  }
  
  .hero-subtext {
@@ -127,7 +128,7 @@ button {
    background-color: aliceblue;
  }
 
- span{
+ .subtext{
   background-color: aliceblue;
   padding:2px;
  }

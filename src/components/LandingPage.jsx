@@ -12,13 +12,15 @@ function LandingPage({ onButtonClick }) {
         </nav>
         <section className="hero-section">
           <div className="hero-caption">
-            The Only Productivity App You'll Need
+            Elevate Your Workflow With The Only Productivity App You'll Need
           </div>
           <div className="hero-subtext">
-            <span>
+            <div className="subtext">
               dash helps you stay on top of your tasks, projects, and life.
-            </span>
-            <span>Say Goodbye To Cluttered Browsers and background apps.</span>
+            </div>
+            <div className="subtext">
+              Say Goodbye To Cluttered Browsers and background apps.
+            </div>
           </div>
         </section>
 
