@@ -13,15 +13,6 @@ function App() {
   const handleButtonClick = () => {
     setDisplayApp(true);
   };
-  /*   useEffect(() => {
-    const saveState = () => {
-      localStorage.setItem("displayApp", displayApp);
-    };
-    [displayApp];
-
-    return saveState;
-  }, [displayApp]); */
-
   useEffect(() => {
     const displayState = localStorage.getItem("displayState");
     if (displayState === "true") {
