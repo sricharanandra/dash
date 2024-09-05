@@ -23,7 +23,7 @@ Create and manage sticky notes for quick reminders. Whether it's a snippet of co
 
 - **AI Integration**: Using freemium API's to bring an intelligent chat tool directly into your dashboard to ask your programming doubts (like how to center this div).
 - **Spotify Music Player**: Load and play your favorite tracks without leaving your productivity hub.
-- **URL-Redirecter**: Productivity feature to redirect user-defined blacklisted URL's.
+- **URL-Redirector**: Productivity feature to redirect user-defined blacklisted URL's.
 
 ## 🎨 Why Dash?
 
