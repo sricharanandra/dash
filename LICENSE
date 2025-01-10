@@ -9,6 +9,9 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
+  1. Persons must not publish their implementation of this software bearing the same name as the software i.e. 'dash'.
+  2. Any commercial implementation instances created using this software must provide due credits to the original creator i.e. Sricharan Andra
+
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
