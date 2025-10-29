@@ -1,10 +1,8 @@
-import "../../styles/Home.css";
-
 function Home() {
   return (
     <>
-      <h1 className="home-title">Welcome</h1>
-      <h4>Excuse the tarp, App under construction</h4>
+      <h1 className="text-light-text">Welcome</h1>
+      <h4 className="text-light-text">Excuse the tarp, App under construction</h4>
     </>
   );
 }

@@ -1,53 +1,226 @@
-# dash: Your Ultimate Developer Dashboard 🚀
+# Dash - Full-Stack Task Management App
 
-_dash_ is a sophisticated dashboard designed to revolutionize the daily workflow of developers. Tired of endless browser tabs and juggling multiple apps, hogging all of your computing power? dash consolidates all your essential tools into one seamless, intuitive platform. Whether you're managing tasks, jotting down quick notes, or looking for a future-ready chat interface and music player, _dash_ is your all-in-one solution for unparalleled productivity and organization.
+A secure, scalable task management application with JWT authentication, built with React, Express, and PostgreSQL.
 
-## 🌟 Key Features
+## Features
 
-### 🔖 Tasks
+- **User Authentication** - Secure signup/login with JWT
+- **Protected Routes** - Dashboard accessible only when logged in
+- **Task Management** - Full CRUD operations stored in PostgreSQL
+- **Real-time Search** - Instantly filter tasks by title
+- **Category Filters** - Organize by Important, General, or Finish by Today
+- **User Isolation** - Each user sees only their own tasks
+- **Secure Password Storage** - bcrypt hashing with salt
+- **Form Validation** - Client and server-side validation
+- **Modern UI** - TailwindCSS dark theme
 
-Effortlessly add, track, and delete your pending tasks. Add your tasks by it's category, stay organized and on top of your to-do list with a tool that's as dynamic as your day.
+## Quick Start
 
-### 📓 Sticky Notes
+### Prerequisites
+- Node.js installed
+- PostgreSQL installed and running
+- Database `sreus` exists with tables created (see `server/config/database.sql`)
 
-Create and manage sticky notes for quick reminders. Whether it's a snippet of code or an important reminder, keep your thoughts within reach.
+### Step 1: Start Backend
+```bash
+cd server
+npm install
+node server.js
+```
 
-### Curently Cooking 🍳
+**Expected output:**
+```
+Server running on port 5000
+Database connected
+```
 
-- **Testing Spotify API Authentication** for users to log into their spotify accounts.
-- Improving the new "add by category" feature in Tasks.
-- Adding an edit feature to edit a sticky note.
-- Looking for GenAI API's
+### Step 2: Start Frontend (New Terminal)
+```bash
+npm install
+npm run dev
+```
 
-### 🔮 Future Feature Integrations
+**Expected output:**
+```
+Local:   http://localhost:5173/
+```
 
-- **AI Integration**: Using freemium API's to bring an intelligent chat tool directly into your dashboard to ask your programming doubts (like how to center this div).
-- **Spotify Music Player**: Load and play your favorite tracks without leaving your productivity hub.
-- **URL-Redirector**: Productivity feature to redirect user-defined blacklisted URL's.
+### Step 3: Open App
+Visit: **http://localhost:5173**
 
-## 🎨 Why Dash?
+## First Time Setup
 
-- **Unified Experience**: Centralize your tools and reduce the chaos of multiple apps.
-- **Developer-Centric**: Tailored to meet the unique needs of developers with a focus on efficiency and functionality.
-- **Extensible and Open Source**: Built with flexibility in mind, Dash is open to extensions and community-driven improvements.
+1. Click **"Sign Up"** button
+2. Fill in your details:
+   - Name: Your Name
+   - Email: you@example.com
+   - Password: Test@1234 (must include uppercase, lowercase, number, special char)
+   - Confirm Password: Test@1234
+3. Click **"Sign Up"**
+4. Auto-redirects to login page
+5. **Login** with your credentials
+6. Start using the dashboard!
 
-## What's New
+## What You Can Do
 
-- You can now add your Tasks by categories (Finish by Today, Important, General)
+### Dashboard (`/`)
+- View your profile
+- Access navigation
+- Logout from dropdown menu
 
-## 🚀 Get Started
+### Tasks (`/tasks`)
+- **Create**: Type task and press Enter
+- **Read**: All your tasks load automatically
+- **Delete**: Click trash icon
+- **Search**: Type in search box for real-time filtering
+- **Filter**: Click category buttons (Important, General, Finish by Today)
 
-Ready to boost your productivity? Follow these simple steps to get started with Dash:
+## � Security Features
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/sricharanandra/dash.git
-   ```
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd dash
-   ```
-3. **Install Dependencies**:
+- Password hashing with bcrypt (10 rounds)
+- JWT tokens with 24-hour expiration
+- Protected API endpoints
+- Input validation (client + server)
+- CORS configuration
+- SQL injection prevention
+- XSS protection
+
+## Tech Stack
+
+### Frontend
+- React 18.2.0
+- React Router DOM 6.23.1
+- TailwindCSS 3.4.0
+- Axios
+- Vite 5.2.0
+
+### Backend
+- Node.js with Express 4.18.2
+- PostgreSQL with pg 8.11.3
+- JWT (jsonwebtoken)
+- bcryptjs for password hashing
+- express-validator
+- CORS
+
+## Project Structure
+
+```
+dash/
+├── server/              # Backend (Express + PostgreSQL)
+│   ├── config/         # Database configuration
+│   ├── middleware/     # Auth & validation
+│   ├── routes/         # API endpoints
+│   └── server.js       # Main server file
+├── src/                # Frontend (React)
+│   ├── components/     # React components
+│   ├── contexts/       # Auth context
+│   ├── services/       # API services
+│   └── App.jsx         # Main app component
+├── DEPLOYMENT.md       # Production deployment guide
+├── API_TESTING.md      # API testing documentation
+└── PROJECT_SUMMARY.md  # Complete feature list
+```
+
+## Testing
+
+See `TESTING.md` for comprehensive testing guide.
+
+**Quick Test:**
+```bash
+# Test API health
+curl http://localhost:5000/api/health
+
+# Should return: {"status":"OK",...}
+```
+
+## Database Schema
+
+### Users Table
+- id (Primary Key)
+- email (Unique)
+- password_hash
+- name
+- created_at
+- updated_at
+
+### Tasks Table
+- id (Primary Key)
+- user_id (Foreign Key → users.id)
+- title
+- category (Important | General | Finish by Today)
+- completed
+- created_at
+- updated_at
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Create new account
+- `POST /api/auth/login` - Login user
+- `GET /api/auth/verify` - Verify JWT token
+
+### User Profile
+- `GET /api/user/profile` - Get user profile (Protected)
+- `PUT /api/user/profile` - Update profile (Protected)
+
+### Tasks
+- `GET /api/tasks` - Get all tasks (Protected)
+- `POST /api/tasks` - Create task (Protected)
+- `PUT /api/tasks/:id` - Update task (Protected)
+- `DELETE /api/tasks/:id` - Delete task (Protected)
+
+## Deployment
+
+See `DEPLOYMENT.md` for complete production deployment guide to Oracle instance at tasks.sreus.tech.
+
+**Key Steps:**
+1. Set production environment variables
+2. Generate strong JWT secret
+3. Configure Nginx reverse proxy
+4. Get SSL certificate
+5. Use PM2 for process management
+6. Build frontend: `npm run build`
+
+## Troubleshooting
+
+### Backend won't start
+```bash
+# Check PostgreSQL is running
+psql -U sreus -d sreus -c "SELECT NOW();"
+```
+
+### "Cannot connect to server"
+- Ensure backend is running on port 5000
+- Check `server/.env` has correct database credentials
+
+### Tasks not loading
+- Open browser DevTools (F12)
+- Check Console for errors
+- Verify token exists in Application → Local Storage
+
+### Redirecting to login constantly
+- Token may be expired
+- Clear localStorage and login again
+
+## License
+
+This project is open source.
+
+## Contributing
+
+Contributions welcome! See the repository for details.
+
+## Support
+
+For issues:
+- Check `TESTING.md` for testing guide
+- Check `API_TESTING.md` for API documentation
+- Check `DEPLOYMENT.md` for deployment guide
+
+---
+
+**Built with care for developers who value productivity and security.**
+
    ```bash
    npm install
    ```
@@ -57,7 +230,7 @@ Ready to boost your productivity? Follow these simple steps to get started with 
    ```
 5. **Open Dash in Your Browser**: Navigate to `http://localhost:5173` to start using Dash.
 
-## 🛠️ How to Contribute
+## How to Contribute
 
 We welcome contributions from developers of all levels. To contribute to Dash:
 
@@ -81,11 +254,11 @@ We welcome contributions from developers of all levels. To contribute to Dash:
    ```
 6. **Create a Pull Request** on GitHub.
 
-## 📜 License
+## License
 
 Dash is licensed under the MIT License. See the [LICENSE](https://github.com/sricharanandra/dash/blob/main/LICENSE) file for more details.
 
-## 📬 Get in Touch
+## Get in Touch
 
 Have questions or need support? Reach out to us:
 
@@ -97,4 +270,4 @@ Elevate your development workflow with dash and experience a new level of effici
 
 ---
 
-_Made with ❤️_
+_Made with care_
